@@ -1,0 +1,3 @@
+/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles/LibraryManagement.dir
+/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles/edit_cache.dir
+/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles/rebuild_cache.dir

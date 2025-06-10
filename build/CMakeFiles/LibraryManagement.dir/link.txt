@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wl,--dependency-file=CMakeFiles/LibraryManagement.dir/link.d CMakeFiles/LibraryManagement.dir/main.cpp.o CMakeFiles/LibraryManagement.dir/connection.cpp.o CMakeFiles/LibraryManagement.dir/library.cpp.o -o LibraryManagement   -L/usr/local/mysql-connector-c++-9.3.0/lib64  -Wl,-rpath,/usr/local/mysql-connector-c++-9.3.0/lib64 -lmysqlcppconn
