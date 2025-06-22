@@ -85,12 +85,12 @@ clean: CMakeFiles/LibraryManagement.dir/clean
 CMakeFiles/LibraryManagement.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles --progress-num=1,2,3,4 "Built target LibraryManagement"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target LibraryManagement"
 .PHONY : CMakeFiles/LibraryManagement.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/LibraryManagement.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devhimal/Projects/data-structure/library-management/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devhimal/Projects/data-structure/library-management/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/LibraryManagement.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/devhimal/Projects/data-structure/library-management/build/CMakeFiles 0
 .PHONY : CMakeFiles/LibraryManagement.dir/rule
@@ -102,7 +102,7 @@ LibraryManagement: CMakeFiles/LibraryManagement.dir/rule
 # codegen rule for target.
 CMakeFiles/LibraryManagement.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target LibraryManagement"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Finished codegen for target LibraryManagement"
 .PHONY : CMakeFiles/LibraryManagement.dir/codegen
 
 # clean rule for target.

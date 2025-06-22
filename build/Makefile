@@ -129,6 +129,30 @@ LibraryManagement/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/build
 .PHONY : LibraryManagement/fast
 
+borrow.o: borrow.cpp.o
+.PHONY : borrow.o
+
+# target to build an object file
+borrow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/borrow.cpp.o
+.PHONY : borrow.cpp.o
+
+borrow.i: borrow.cpp.i
+.PHONY : borrow.i
+
+# target to preprocess a source file
+borrow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/borrow.cpp.i
+.PHONY : borrow.cpp.i
+
+borrow.s: borrow.cpp.s
+.PHONY : borrow.s
+
+# target to generate assembly for a file
+borrow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/borrow.cpp.s
+.PHONY : borrow.cpp.s
+
 connection.o: connection.cpp.o
 .PHONY : connection.o
 
@@ -201,6 +225,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+user.o: user.cpp.o
+.PHONY : user.o
+
+# target to build an object file
+user.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/user.cpp.o
+.PHONY : user.cpp.o
+
+user.i: user.cpp.i
+.PHONY : user.i
+
+# target to preprocess a source file
+user.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/user.cpp.i
+.PHONY : user.cpp.i
+
+user.s: user.cpp.s
+.PHONY : user.s
+
+# target to generate assembly for a file
+user.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/LibraryManagement.dir/build.make CMakeFiles/LibraryManagement.dir/user.cpp.s
+.PHONY : user.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... LibraryManagement"
+	@echo "... borrow.o"
+	@echo "... borrow.i"
+	@echo "... borrow.s"
 	@echo "... connection.o"
 	@echo "... connection.i"
 	@echo "... connection.s"
@@ -219,6 +270,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... user.o"
+	@echo "... user.i"
+	@echo "... user.s"
 .PHONY : help
 
 

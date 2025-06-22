@@ -114,11 +114,41 @@ CMakeFiles/LibraryManagement.dir/library.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LibraryManagement.dir/library.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devhimal/Projects/data-structure/library-management/library.cpp -o CMakeFiles/LibraryManagement.dir/library.cpp.s
 
+CMakeFiles/LibraryManagement.dir/user.cpp.o: CMakeFiles/LibraryManagement.dir/flags.make
+CMakeFiles/LibraryManagement.dir/user.cpp.o: /home/devhimal/Projects/data-structure/library-management/user.cpp
+CMakeFiles/LibraryManagement.dir/user.cpp.o: CMakeFiles/LibraryManagement.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LibraryManagement.dir/user.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LibraryManagement.dir/user.cpp.o -MF CMakeFiles/LibraryManagement.dir/user.cpp.o.d -o CMakeFiles/LibraryManagement.dir/user.cpp.o -c /home/devhimal/Projects/data-structure/library-management/user.cpp
+
+CMakeFiles/LibraryManagement.dir/user.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LibraryManagement.dir/user.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devhimal/Projects/data-structure/library-management/user.cpp > CMakeFiles/LibraryManagement.dir/user.cpp.i
+
+CMakeFiles/LibraryManagement.dir/user.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LibraryManagement.dir/user.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devhimal/Projects/data-structure/library-management/user.cpp -o CMakeFiles/LibraryManagement.dir/user.cpp.s
+
+CMakeFiles/LibraryManagement.dir/borrow.cpp.o: CMakeFiles/LibraryManagement.dir/flags.make
+CMakeFiles/LibraryManagement.dir/borrow.cpp.o: /home/devhimal/Projects/data-structure/library-management/borrow.cpp
+CMakeFiles/LibraryManagement.dir/borrow.cpp.o: CMakeFiles/LibraryManagement.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LibraryManagement.dir/borrow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LibraryManagement.dir/borrow.cpp.o -MF CMakeFiles/LibraryManagement.dir/borrow.cpp.o.d -o CMakeFiles/LibraryManagement.dir/borrow.cpp.o -c /home/devhimal/Projects/data-structure/library-management/borrow.cpp
+
+CMakeFiles/LibraryManagement.dir/borrow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LibraryManagement.dir/borrow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/devhimal/Projects/data-structure/library-management/borrow.cpp > CMakeFiles/LibraryManagement.dir/borrow.cpp.i
+
+CMakeFiles/LibraryManagement.dir/borrow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LibraryManagement.dir/borrow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/devhimal/Projects/data-structure/library-management/borrow.cpp -o CMakeFiles/LibraryManagement.dir/borrow.cpp.s
+
 # Object files for target LibraryManagement
 LibraryManagement_OBJECTS = \
 "CMakeFiles/LibraryManagement.dir/main.cpp.o" \
 "CMakeFiles/LibraryManagement.dir/connection.cpp.o" \
-"CMakeFiles/LibraryManagement.dir/library.cpp.o"
+"CMakeFiles/LibraryManagement.dir/library.cpp.o" \
+"CMakeFiles/LibraryManagement.dir/user.cpp.o" \
+"CMakeFiles/LibraryManagement.dir/borrow.cpp.o"
 
 # External object files for target LibraryManagement
 LibraryManagement_EXTERNAL_OBJECTS =
@@ -126,10 +156,12 @@ LibraryManagement_EXTERNAL_OBJECTS =
 LibraryManagement: CMakeFiles/LibraryManagement.dir/main.cpp.o
 LibraryManagement: CMakeFiles/LibraryManagement.dir/connection.cpp.o
 LibraryManagement: CMakeFiles/LibraryManagement.dir/library.cpp.o
+LibraryManagement: CMakeFiles/LibraryManagement.dir/user.cpp.o
+LibraryManagement: CMakeFiles/LibraryManagement.dir/borrow.cpp.o
 LibraryManagement: CMakeFiles/LibraryManagement.dir/build.make
 LibraryManagement: CMakeFiles/LibraryManagement.dir/compiler_depend.ts
 LibraryManagement: CMakeFiles/LibraryManagement.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable LibraryManagement"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/devhimal/Projects/data-structure/library-management/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable LibraryManagement"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LibraryManagement.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

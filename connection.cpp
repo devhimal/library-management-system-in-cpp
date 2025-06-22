@@ -1,4 +1,6 @@
 #include "connection.h"
+#include <mysql_driver.h>
+#include <mysql_connection.h>
 #include <iostream>
 
 sql::Connection *connectDB()

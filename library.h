@@ -13,10 +13,10 @@ public:
     Library(const std::string &user, const std::string &role);
 
     void addBook();
+    void updateBook();
+    void deleteBook();
     void displayBooks();
     void searchBook();
-    void deleteBook();
-    void updateBook();
 };
 
 #endif // LIBRARY_H

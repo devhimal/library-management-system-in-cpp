@@ -5,6 +5,8 @@ LibraryManagement: \
   CMakeFiles/LibraryManagement.dir/main.cpp.o \
   CMakeFiles/LibraryManagement.dir/connection.cpp.o \
   CMakeFiles/LibraryManagement.dir/library.cpp.o \
+  CMakeFiles/LibraryManagement.dir/user.cpp.o \
+  CMakeFiles/LibraryManagement.dir/borrow.cpp.o \
   /usr/local/mysql-connector-c++-9.3.0/lib64/libmysqlcppconn.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/libstdc++.so \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libm.so \
@@ -52,6 +54,10 @@ CMakeFiles/LibraryManagement.dir/main.cpp.o:
 CMakeFiles/LibraryManagement.dir/connection.cpp.o:
 
 CMakeFiles/LibraryManagement.dir/library.cpp.o:
+
+CMakeFiles/LibraryManagement.dir/user.cpp.o:
+
+CMakeFiles/LibraryManagement.dir/borrow.cpp.o:
 
 /usr/local/mysql-connector-c++-9.3.0/lib64/libmysqlcppconn.so:
 

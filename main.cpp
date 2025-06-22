@@ -1,59 +1,9 @@
 #include <iostream>
-#include <string>
 #include <limits>
+#include "user.h"
 #include "library.h"
-#include "connection.h"
-#include <cppconn/prepared_statement.h>
-#include <cppconn/resultset.h>
+#include "borrow.h"
 
-// Function to authenticate user and return role
-bool authenticateUser(std::string &username, std::string &role)
-{
-    std::string password;
-    std::cout << "👤 Enter username: ";
-    std::cin >> username;
-    std::cout << "🔐 Enter password: ";
-    std::cin >> password;
-
-    sql::Connection *con = connectDB();
-    if (!con)
-        return false;
-
-    try
-    {
-        sql::PreparedStatement *stmt = con->prepareStatement(
-            "SELECT role FROM users WHERE username = ? AND pass = ?");
-        stmt->setString(1, username);
-        stmt->setString(2, password);
-
-        sql::ResultSet *res = stmt->executeQuery();
-
-        if (res->next())
-        {
-            role = res->getString("role");
-            delete res;
-            delete stmt;
-            delete con;
-            return true;
-        }
-        else
-        {
-            std::cout << "❌ Invalid credentials.\n";
-        }
-
-        delete res;
-        delete stmt;
-    }
-    catch (sql::SQLException &e)
-    {
-        std::cerr << "❌ Login error: " << e.what() << std::endl;
-    }
-
-    delete con;
-    return false;
-}
-
-// Clear input stream after invalid input
 void clearInput()
 {
     std::cin.clear();
@@ -62,40 +12,72 @@ void clearInput()
 
 int main()
 {
-    std::string username, role;
-
     std::cout << "=== 📚 Library Management System ===\n";
 
-    if (!authenticateUser(username, role))
+    User user;
+    int option;
+
+    while (true)
     {
-        return 1;
+        std::cout << "\n1. Register\n2. Login\n0. Exit\nChoose option: ";
+        std::cin >> option;
+        if (std::cin.fail())
+        {
+            clearInput();
+            std::cout << "Invalid input\n";
+            continue;
+        }
+        if (option == 1)
+        {
+            if (user.registerUser())
+            {
+                std::cout << "You can now login.\n";
+            }
+        }
+        else if (option == 2)
+        {
+            if (user.loginUser())
+            {
+                break;
+            }
+        }
+        else if (option == 0)
+        {
+            std::cout << "Goodbye!\n";
+            return 0;
+        }
+        else
+        {
+            std::cout << "Invalid option\n";
+        }
     }
 
-    Library library(username, role);
-    int choice;
+    Library library(user.getUsername(), user.getRole());
+    Borrow borrow(user.getUsername(), user.getRole());
 
+    int choice;
     do
     {
-        std::cout << "\nWelcome, " << username << " (" << role << ")\n";
+        std::cout << "\nWelcome, " << user.getUsername() << " (" << user.getRole() << ")\n";
         std::cout << "====== Menu ======\n";
-        std::cout << "1. Display Books\n";
-        std::cout << "2. Search Book\n";
-
-        if (role == "admin")
+        std::cout << "1. Display Books\n2. Search Books\n";
+        if (user.getRole() == "admin" || user.getRole() == "librarian")
         {
-            std::cout << "3. Add Book\n";
-            std::cout << "4. Delete Book\n";
-            std::cout << "5. Update Book\n";
+            std::cout << "3. Add Book\n4. Update Book\n5. Delete Book\n";
+            std::cout << "6. Issue (Borrow) Book\n7. Return Book\n8. View Borrowed Books\n";
+            std::cout << "9. Manage Users (Admin Only)\n";
         }
-
-        std::cout << "0. Exit\n";
-        std::cout << "Enter choice: ";
+        else
+        {
+            std::cout << "6. View My Borrowed Books\n";
+        }
+        std::cout << "0. Exit\nEnter choice: ";
         std::cin >> choice;
 
         if (std::cin.fail())
         {
             clearInput();
-            std::cout << "❗ Invalid input.\n";
+            std::cout << "Invalid input.\n";
             continue;
         }
 
@@ -108,28 +90,56 @@ int main()
             library.searchBook();
             break;
         case 3:
-            if (role == "admin")
+            if (user.getRole() == "admin" || user.getRole() == "librarian")
                 library.addBook();
             else
-                std::cout << "❌ Access denied.\n";
+                std::cout << "Access denied.\n";
             break;
         case 4:
-            if (role == "admin")
-                library.deleteBook();
-            else
-                std::cout << "❌ Access denied.\n";
-            break;
-        case 5:
-            if (role == "admin")
+            if (user.getRole() == "admin" || user.getRole() == "librarian")
                 library.updateBook();
             else
-                std::cout << "❌ Access denied.\n";
+                std::cout << "Access denied.\n";
+            break;
+        case 5:
+            if (user.getRole() == "admin" || user.getRole() == "librarian")
+                library.deleteBook();
+            else
+                std::cout << "Access denied.\n";
+            break;
+        case 6:
+            if (user.getRole() == "admin" || user.getRole() == "librarian")
+                borrow.borrowBook();
+            else
+                borrow.viewBorrowedBooks();
+            break;
+        case 7:
+            if (user.getRole() == "admin" || user.getRole() == "librarian")
+                borrow.returnBook();
+            else
+                std::cout << "Access denied.\n";
+            break;
+        case 8:
+            if (user.getRole() == "admin" || user.getRole() == "librarian")
+                borrow.viewBorrowedBooks();
+            else
+                std::cout << "Access denied.\n";
+            break;
+        case 9:
+            if (user.getRole() == "admin")
+            {
+                std::cout << "User management not implemented yet.\n";
+            }
+            else
+            {
+                std::cout << "Access denied.\n";
+            }
             break;
         case 0:
-            std::cout << "👋 Exiting...\n";
+            std::cout << "Exiting...\n";
             break;
         default:
-            std::cout << "❗ Invalid option.\n";
+            std::cout << "Invalid option.\n";
         }
 
     } while (choice != 0);

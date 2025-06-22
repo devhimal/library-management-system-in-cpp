@@ -117,8 +117,6 @@ CMakeFiles/LibraryManagement.dir/library.cpp.o: \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
  /home/devhimal/Projects/data-structure/library-management/connection.h \
- /usr/local/mysql-connector-c++-9.3.0/include/jdbc/mysql_driver.h \
- /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/driver.h \
  /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/connection.h \
  /usr/include/c++/13/map /usr/include/c++/13/bits/stl_tree.h \
  /usr/include/c++/13/ext/aligned_buffer.h \
@@ -193,35 +191,14 @@ CMakeFiles/LibraryManagement.dir/library.cpp.o: \
  /usr/include/c++/13/list /usr/include/c++/13/bits/stl_list.h \
  /usr/include/c++/13/bits/list.tcc \
  /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/exception.h \
- /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/callback.h \
- /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
- /usr/include/c++/13/unordered_map \
- /usr/include/c++/13/bits/unordered_map.h \
- /usr/include/c++/13/bits/hashtable.h \
- /usr/include/c++/13/bits/hashtable_policy.h \
- /usr/include/c++/13/bits/enable_special_members.h \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
- /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/array \
- /usr/include/c++/13/compare \
- /usr/local/mysql-connector-c++-9.3.0/include/jdbc/mysql_connection.h \
- /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/connection.h \
- /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/driver.h \
- /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/connection.h \
- /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/exception.h \
  /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/prepared_statement.h \
  /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/statement.h \
  /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/config.h \
  /usr/include/inttypes.h \
  /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/resultset.h \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc \
  /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/resultset_metadata.h \
  /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/datatype.h \
- /usr/include/c++/13/iomanip /usr/include/c++/13/locale \
- /usr/include/c++/13/bits/locale_facets_nonio.h /usr/include/c++/13/ctime \
- /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
- /usr/include/c++/13/bits/locale_facets_nonio.tcc \
- /usr/include/c++/13/bits/locale_conv.h \
- /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/sstream \
- /usr/include/c++/13/bits/sstream.tcc
+ /usr/local/mysql-connector-c++-9.3.0/include/jdbc/cppconn/resultset.h

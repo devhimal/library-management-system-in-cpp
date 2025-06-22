@@ -10,8 +10,12 @@ private:
     std::string role;
 
 public:
-    bool login();
-    std::string getRole();
+    User() = default;
+
+    bool registerUser();
+    bool loginUser();
+    std::string getUsername() const;
+    std::string getRole() const;
 };
 
-#endif
+#endif // USER_H

@@ -15,6 +15,8 @@ add_executable(LibraryManagement
     main.cpp
     connection.cpp
     library.cpp
+    user.cpp
+    borrow.cpp
 )
 
 # Link against the MySQL Connector/C++ library
