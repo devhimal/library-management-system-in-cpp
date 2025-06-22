@@ -1,25 +1,38 @@
 # Library Management System in C++
 
-A comprehensive Library Management System implemented in C++ with a MySQL backend. This project demonstrates how to connect a C++ application to a MySQL database using MySQL Connector/C++ 9.3.0, with CMake for build configuration and best practices for version control.
+A comprehensive Library Management System implemented in C++ with a MySQL backend. This project demonstrates connecting a C++ application to a MySQL database using MySQL Connector/C++ 9.3.0, with CMake for builds.
 
 ---
 
-## User-Based Operations
+## Features & Project Scope
 
-This project supports user-based operations for library management, including:
+- **User Registration & Login:**  
+  Secure registration and authentication for members.
 
-- **User Registration**: Add new users/members to the library system.
-- **User Authentication**: Login and validate users.
-- **User Role Management**: Assign and manage roles (admin, member, librarian, etc.)
-- **User Activity Tracking**: Monitor issued books, returns, and fines per user.
-- **User Information Management**: Update and delete user profiles.
+- **Role-Based Dashboard Access:**  
+  - **Admin & Librarian:**
+    - Add, update, and delete book records
+    - Manage borrowing and returning of books
+    - Search and filter books
+    - Manage all user accounts (add, update, delete users, assign roles)
+  - **Users:**
+    - View and search available books
+    - View their own borrowed books
+
+- **Activity Tracking:**  
+  - Track issued and returned books per user
+  - Calculate and display fines for overdue returns (if implemented)
+
+- **User Role Management:**  
+  - Assign admin, librarian, or user roles to each account
+  - Dashboard adapts to role-based permissions
 
 ---
 
 ## Technologies Used
 
 - **C++** (Core application logic)
-- **MySQL** (Relational database management)
+- **MySQL** (Relational database)
 - **MySQL Connector/C++ 9.3.0** (C++ to MySQL connectivity)
 - **CMake** (Build system)
 - **Git** (Version control)
@@ -51,7 +64,7 @@ cd library-management-system-in-cpp
   ```sql
   CREATE DATABASE library_db;
   ```
-- Create user-related tables (see provided SQL scripts if available).
+- Create the necessary tables for users, books, and borrowing records (see provided SQL scripts if available).
 
 ### 5. Update Database Credentials
 
